@@ -6,6 +6,7 @@ const fs = require('fs');
 // returns function
 //console.log(typeof express);
 
+const port = process.env.PORT || 3400;
 const app = express();
 
 app.set('view engine' ,'hbs');
@@ -138,7 +139,6 @@ app.get('/bad' , (req , res) =>{
  *         b) function (optional argument) 
  */
 
-const port = process.env.port || 3400;
 app.listen(port , ()=>{
     console.log(`App is listening on port ${port}...`);
 })
