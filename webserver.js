@@ -144,6 +144,18 @@ app.get('/projects' , (req , res) =>{
 
 })
 
+
+app.get('/extra' , (req ,res) => {
+
+    const extraObj = {
+        dateTime: new Date().toString()
+    }
+
+    res.send(extraObj);
+
+})
+
+
 /**
  * 
  *  Fun facts:
