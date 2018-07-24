@@ -59,15 +59,16 @@ hbs.registerHelper('myWorld' , (text) => {
     next();
  })
 
-app.use((req , res , next) => {
 
-    const maintenenceObj = {
+// app.use((req , res , next) => {
 
-        headerTitle: 'Welcome To My World!!',
-    };
-    res.render('maintenance.hbs',maintenenceObj);
+//     const maintenenceObj = {
 
-})
+//         headerTitle: 'Maintenance Alert!!',
+//     };
+//     res.render('maintenance.hbs',maintenenceObj);
+
+// })
 
 
 // Adding routes
@@ -113,7 +114,7 @@ app.get('/' , (req , res) =>{
 app.get('/about' , (req , res) => {
 
     const aboutObj = {
-        headerTitle: 'Welcome To My World!!!',
+        headerTitle: 'About Us World!!!',
         pageTitle: 'About Page',
 
     };
@@ -129,6 +130,18 @@ app.get('/bad' , (req , res) =>{
     };
 
     res.status(400).send(badObj);
+})
+
+
+app.get('/projects' , (req , res) =>{
+
+    const projectObj = {
+        headerTitle: 'Projects World!!',
+        pageTitle: 'Projects Page',
+        projectName: 'Node Server'
+    }
+    res.render('project.hbs' , projectObj);
+
 })
 
 /**
