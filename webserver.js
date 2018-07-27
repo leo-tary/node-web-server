@@ -156,6 +156,19 @@ app.get('/extra' , (req ,res) => {
 })
 
 
+
+app.get('/munish' , (req , res) => {
+
+    const baklolObj = {
+        headerTitle: 'HAAN BHAI HAAN MUNISH BAKLOL HI HAI...',
+        pageTitle: 'baklol domain',
+        baklolDesc: 'Enjoys F**a\'s Company...More to come...'
+    }
+
+    res.render('munish.hbs' , baklolObj);
+
+})
+
 /**
  * 
  *  Fun facts:
